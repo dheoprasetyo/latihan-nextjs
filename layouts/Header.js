@@ -1,17 +1,18 @@
 import React from 'react';
 import {Navbar, Container, Nav} from 'react-bootstrap'
 import Link from 'next/link'
+import {sidebar} from './sidebar'
 
 export default function Header(){
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
             <Nav className="me-auto">
-            <Link href="/">
-                <Nav.Link href="/">Home</Nav.Link>
+            {sidebar.map((item) => (
+            <Link href={item.path}>
+                <Nav.Link href={item.path}>{item.label}</Nav.Link>
             </Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            ))}
             </Nav>
             </Container>
         </Navbar>

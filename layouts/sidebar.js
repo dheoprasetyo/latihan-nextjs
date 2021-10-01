@@ -14,4 +14,9 @@ export const sidebar = [
         "eventKey": "2",
         "path": "/registration"
     },
+    {
+        "label": "Antd",
+        "eventKey": "3",
+        "path": "/antd"
+    },
 ]
